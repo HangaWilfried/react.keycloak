@@ -48,3 +48,33 @@ export default tseslint.config({
   },
 })
 ```
+
+
+
+# KEYCLOAK INFO
+
+```sh
+[VERSION]: 21.0.0
+```
+
+### pour exporter le realm on du suivre ces instructions
+
+- exporter le realm grace a la commande suivante
+
+```sh
+/opt/keycloak/bin/kc.sh export --dir /opt/keycloak/ --users realm_file
+```
+
+- copier le nouveau realm creer dans l'environnement docker vers le bureau par exemple
+
+```sh
+docker cp kd:/opt/keycloak/demo-realm.json /${HOME}/Desktop/realm.json
+```
+
+## LANCER KEYCLOAK
+
+```sh
+
+docker run --name kd -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -e KC_HOSTNAME_PATH=/auth -e KC_HTTP_RELATIVE_PATH=/auth -v $(pwd)/keycloak/realm.json:/opt/keycloak/data/import/realm.json -v $(pwd)/keycloak/themes/kd:/opt/keycloak/themes/k-demo quay.io/keycloak/keycloak:21.0.0 start-dev --import-realm
+
+```
