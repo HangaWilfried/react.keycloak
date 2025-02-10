@@ -72,9 +72,24 @@ docker cp kd:/opt/keycloak/demo-realm.json /${HOME}/Desktop/realm.json
 ```
 
 ## LANCER KEYCLOAK
-
+1) premiere facon
 ```sh
 
 docker run --name kd -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -v $(pwd)/keycloak/realm.json:/opt/keycloak/data/import/realm.json -v $(pwd)/keycloak/themes/kd:/opt/keycloak/themes/k-demo quay.io/keycloak/keycloak:21.0.0 start-dev --import-realm
 
+```
+
+2) deuxieme facon, consistera a executer le docker compose.
+
+
+## UTILISATEUR PAR DEFAUT
+user1: ```
+  email: wilfriedhanga5@gmail.com
+  mot de passe: 1234
+```
+
+
+user2: ```
+  email: lyviananyang@gmail.com
+  mot de passe: 1234
 ```
