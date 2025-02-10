@@ -83,13 +83,12 @@ docker run --name kd -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASS
 
 
 ## UTILISATEUR PAR DEFAUT
-user1: ```
+```
+user1:
   email: wilfriedhanga5@gmail.com
   mot de passe: 1234
-```
-
-
-user2: ```
+user2
   email: lyviananyang@gmail.com
   mot de passe: 1234
+
 ```
