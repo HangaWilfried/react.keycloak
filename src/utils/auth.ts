@@ -9,7 +9,7 @@ export interface IAuth {
 
 const KEYCLOAK_CONFIG = {
   url: "http://localhost:8080",
-  realm: "kd",
+  realm: "demo",
   clientId: "kd.web",
 };
 

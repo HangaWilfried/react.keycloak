@@ -75,6 +75,6 @@ docker cp kd:/opt/keycloak/demo-realm.json /${HOME}/Desktop/realm.json
 
 ```sh
 
-docker run --name kd -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -e KC_HOSTNAME_PATH=/auth -e KC_HTTP_RELATIVE_PATH=/auth -v $(pwd)/keycloak/realm.json:/opt/keycloak/data/import/realm.json -v $(pwd)/keycloak/themes/kd:/opt/keycloak/themes/k-demo quay.io/keycloak/keycloak:21.0.0 start-dev --import-realm
+docker run --name kd -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -v $(pwd)/keycloak/realm.json:/opt/keycloak/data/import/realm.json -v $(pwd)/keycloak/themes/kd:/opt/keycloak/themes/k-demo quay.io/keycloak/keycloak:21.0.0 start-dev --import-realm
 
 ```

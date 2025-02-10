@@ -6,7 +6,7 @@ export default function Default() {
 
     return (
         <div>
-            <header className="bg-blue-500 p-4 flex justify-between">
+            <header className="bg-gray-600 p-4 flex justify-between">
                 <h1 className="text-white">K.D</h1>
                 <div className="flex items-center gap-2">
                     {authenticated ? (
@@ -21,7 +21,7 @@ export default function Default() {
                     )}
                 </div>
             </header>
-            <div>
+            <div className="p-10">
                 <Outlet />
             </div>
         </div>
