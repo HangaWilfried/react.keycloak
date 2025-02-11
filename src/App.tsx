@@ -1,5 +1,4 @@
 import Home from "./pages/Home";
-import Welcome from "./pages/Welcome";
 import DefaultLayout from "./layouts/layout.default";
 
 import { AuthProvider } from "./context/session";
@@ -12,7 +11,6 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<Home />} />
-            <Route path="welcome" element={<Welcome />} />
           </Route>
         </Routes>
       </BrowserRouter>
